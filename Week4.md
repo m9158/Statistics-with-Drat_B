@@ -58,6 +58,13 @@
   - 데이터의 결측값이나 이상치 파악 및 보완
   - 변수 간의 관계성 파악
   - 분석 목적과 방향성 점검 및 보정
+
+2. 공분산과 상관성 분석
+  - 공분산: 서로 공유하는 분산 => 두 분산의 관계를 뜻함. 공통적인 분산의 정도 파악
+      - 값이 0이면 두 변수는 상관관계가 없는 것이고, 양수면 양의 관계, 음수면 음의 관계를 나타낸다고 볼 수 있다.
+      - 그러나 공분산의 크기가 상관성의 정도를 알려주지는 않음.
+  - 피어슨 상관계수: 변수 1, 2가 함께 변하는 정도(공분산)을 변수 1, 2가 변하는 전체 정도로 나누어준 것.
+      - 일반적으로 0.7 이상이면 상관관계가 매우 높다, 0.4 이상이면 어느 정도 상관관계가 있다고 해석한다.
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
 
@@ -73,7 +80,70 @@
 >
 > > **인증 예시 : 통계 프로그램 결과, 시각화 이미지 캡처 등**
 
-<!-- 이 주석을 지우고 “실습 결과 화면(캡처)을 이곳에 첨부해주세요.-->
+
+
+**1. 탐색적 데이터 분석(EDA)**
+
+<img width="945" height="740" alt="image" src="https://github.com/user-attachments/assets/b2325da7-142e-4b29-86cd-e8444f417ba7" />
+
+=> 0이 확연히 많은 것으로 봐서 당일 체크인하는 투숙객이 많은 편이라는 것을 확인할 수 있다.
+
+<img width="755" height="558" alt="image" src="https://github.com/user-attachments/assets/c7a5367c-d11a-4aa3-afde-a558fcd0b258" />
+
+=> 리조트 호텔은 리드 타임의 최대값이 시티 호텔보다 높지만, 대체적으로 더 작은 값에 분포하는 것을 알 수 있다.
+
+
+
+**2. 공분산과 상관성 분석**
+
+
+<img width="1807" height="791" alt="image" src="https://github.com/user-attachments/assets/562f709b-c65c-4ab2-9149-92a5525284ec" />
+<img width="1788" height="808" alt="image" src="https://github.com/user-attachments/assets/17955593-9726-4875-972b-bdb90372b459" />
+
+=> 몇 개의 산점도는 어느 정도 상관성이 보이는것을 확인할 수 있다. 종속변수라 할 수 있는 quality 변수는 자연수 형태로 3~9로만 이루어져 있기 때문에 다른 변수들과 줄무늬 형태의 산점도를 보인다.
+
+<img width="1575" height="488" alt="image" src="https://github.com/user-attachments/assets/e1932c7b-4b9b-4827-b203-98d5bd603ee6" />
+
+=> 공분산으로는 역시 변수 간 상관성을 분석하기에는 가독성이 떨어진다.
+
+<img width="1550" height="501" alt="image" src="https://github.com/user-attachments/assets/8960b6b3-7b32-48fd-96e8-1bdd22d2ed2a" />
+
+=> 동일한 변수 간에는 상관계수가 1로 나오고 있으며, -1~1 사이의 값을 가지고 있다.
+
+<img width="2054" height="1699" alt="image" src="https://github.com/user-attachments/assets/161f28db-1b49-4874-8cdb-f62cdf50efd5" />
+
+=> 노란색에 가까울수록, 양의 상관관계를 보이고 보라색에 가까울수록 음의 상관관계를 보임. 그러나 정확한 수치 확인이 필요.
+
+<img width="2941" height="2959" alt="image" src="https://github.com/user-attachments/assets/5cd5e0a4-071b-4544-b245-0e41fa112311" />
+
+=> total_sulfur_diocide 변수와 free sulfur dioxide 변수의 상관계수는 0.72로 강한 양의 상관관계를 보이는 것을 직관적으로 알 수 있다.
+
+<img width="3845" height="2986" alt="image" src="https://github.com/user-attachments/assets/711cdd1b-0263-4047-af80-b230f25e7061" />
+
+=> 동일한 두 변수 조합이 두번씩 나오는 것을 방지. 가독성을 높인 히트맵 방식
+
+
+**3. 시간 시각화**
+
+<img width="597" height="542" alt="image" src="https://github.com/user-attachments/assets/a154bfdf-bd23-4394-b2ff-292f5e679486" />
+
+=> 선그래프 시각화에 앞서 일자별 매출액 데이터를 가공
+
+<img width="1748" height="1296" alt="image" src="https://github.com/user-attachments/assets/9165af33-26dd-426b-b078-f88d1ee15b61" />
+
+=> 선그래프 생성. 30일 이동평균선을 삽입하기 위해 rolling()함수를 사용하여 Month의 칼럼 제작. 매출액 편차가 커서 일 매출 선으로는 전체적인 추이 가늠 힘들기 때문에 이동평균선이 도움이 됨.
+
+<img width="2617" height="1373" alt="image" src="https://github.com/user-attachments/assets/e5f3a7f5-030f-4ba3-b6b5-54bca56d747f" />
+
+=> 막대 그래프 생성. 2016년도에 매출액이 다소 감소했다가 이후 증가한 것을 확인 가능.(만약 x축 레이블이 길어서 글자가 겹치는 경우에는 rot옵션 사용)
+
+<img width="2617" height="1915" alt="image" src="https://github.com/user-attachments/assets/df945273-8607-4797-a542-52f668773624" />
+
+=> 누적 막대 그래프 생성. 매출액은 단순 앞의 막대 그래프와 동일하지만, 세 가지 세그먼트의 각 매출액이 구분되어 표현된 것을 확인. 이를 통해 각 연도에서 세그먼트별 매출액 비중이 어느 정도 되는지 파악 가능.
+
+
+
+
 
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
