@@ -142,6 +142,30 @@
 => 누적 막대 그래프 생성. 매출액은 단순 앞의 막대 그래프와 동일하지만, 세 가지 세그먼트의 각 매출액이 구분되어 표현된 것을 확인. 이를 통해 각 연도에서 세그먼트별 매출액 비중이 어느 정도 되는지 파악 가능.
 
 
+**4. 비교 시각화**
+
+<img width="2011" height="2052" alt="image" src="https://github.com/user-attachments/assets/1a7f3f92-b6f2-4101-a2cf-bc49f813d0bd" />
+
+=> 각 팀별 요소들을 히트맵으로 시각화. x축에는 각 요소들이,  y축에는 각 팀이 들어감. 팀간의 큰 차이는 보이지 않음.
+
+<img width="2011" height="2069" alt="image" src="https://github.com/user-attachments/assets/0d97491b-93bf-41be-8d2c-933bf24874e2" />
+
+=> 팀별로 19세부터 34세까지의 나이대에 따라 게임 참여 횟수에 대한 히트맵. 흰색은 Null 값. BRK 팀은 34세 선수의 게임 참여 획수가 약 30회 정도로 확연히 높음.
+
+<img width="4159" height="5832" alt="image" src="https://github.com/user-attachments/assets/fad6cf2c-8d83-4185-9bfa-3603aeb82045" />
+
+=> 방사형 차트를 위해, 하나씩 시각화.
+
+<img width="2183" height="2049" alt="image" src="https://github.com/user-attachments/assets/c55bf4d8-af8c-4714-932b-52562b9a53ba" />
+
+=> 방사형 차트 생성. 하나의 방사형 차트의 5개 팀 모두가 표현됨. 그룹이 많지 않은 경우에 용이. 전체적으로 CHO팀이 우세하다는 것을 알 수 있음.
+
+<img width="1734" height="1242" alt="image" src="https://github.com/user-attachments/assets/587a8e3c-fd2b-447b-9ea4-dbc698d659d8" />
+
+=> 같은 데이터 셋을 활용해 평행 좌표 그래프 시각화. 같은 결과를 눈으로 확인 가능.
+
+
+
 
 
 
