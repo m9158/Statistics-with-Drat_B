@@ -62,8 +62,33 @@
 >
 > > **인증 예시 : 통계 프로그램 결과, 시각화 이미지 캡처 등**
 
-<!-- 이 주석을 지우고 “실습 결과 화면(캡처)을 이곳에 첨부해주세요.-->
+**10.5 분포시각화**
 
+
+<img width="556" height="413" alt="image" src="https://github.com/user-attachments/assets/b7313d8d-c71b-4058-b661-c53075af367b" />
+
+-> 기존 남녀 구별 없이 히스토그램을 생성했을 때 두개의 봉우리가 나왔기 때문에, 성별을 구분하여 히스토그램을 시각화함. 남성 & 여성 데이터 셋을 새로 생성하고 alpha 옵션을 주어 불투명도를 조정함.
+
+
+<img width="636" height="636" alt="image" src="https://github.com/user-attachments/assets/608aa5c1-3385-4830-972d-1fb6f0b264ba" />
+
+-> 표현할 값의 칼럼과 레이블용 칼럼을 지정해주고, 차트의 시작점 각도, 퍼센트 자릿수 등의 옵션을 설정한다. 6개의 국가의 신장 175cm 이상인 샘플 수 비율이 파이차트로 시각화 된다.
+
+<img width="460" height="389" alt="image" src="https://github.com/user-attachments/assets/38acb0b8-084c-479a-a9e1-5798bf4f765b" />
+
+-> 도넛차트는 파이차트에 차트 형태 옵션을 추가하여 생성이 가능하다.
+
+<img width="1662" height="491" alt="image" src="https://github.com/user-attachments/assets/2d4b3b19-09e2-4e3e-91e6-11414543a1c2" />
+
+-> 트리맵 차트는 위계구조를 표현하기 때문에 path 옵션으로 위계구조 순서별 칼럼을 넣어준다. 이 차트에서는 우선 성별로 구분하고 그 안에서 국가별 분포를 표현하기 위해 sex, country 칼럼을 입력해준다. 
+시각화된 트리맵 차트에서는 신장 175cm 이상 샘플의 비율을 나타내므로 남성-이탈리아의 비중이 가장 높고, 여성-일본의 비중이 가장 낮게 나온것을 확인할 수 있다.
+
+<img width="1050" height="271" alt="image" src="https://github.com/user-attachments/assets/67276fb4-1295-47d4-8b6e-7c85247033fc" />
+
+-> 파이차트에 쓰인 데이터셋을 활용하여 와플 차트를 시각화 한다. 각 국가의 비중이 작은 정사각형으로 표현된다. 
+
+
+**관계 시각화**
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
 ~~~
