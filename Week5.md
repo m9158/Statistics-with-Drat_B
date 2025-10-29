@@ -62,7 +62,8 @@
 >
 > > **인증 예시 : 통계 프로그램 결과, 시각화 이미지 캡처 등**
 
-**10.5 분포시각화**
+
+**<10.5 분포시각화>**
 
 
 <img width="556" height="413" alt="image" src="https://github.com/user-attachments/assets/b7313d8d-c71b-4058-b661-c53075af367b" />
@@ -88,7 +89,35 @@
 -> 파이차트에 쓰인 데이터셋을 활용하여 와플 차트를 시각화 한다. 각 국가의 비중이 작은 정사각형으로 표현된다. 
 
 
-**관계 시각화**
+**<10.6 관계 시각화>**
+
+<img width="578" height="416" alt="image" src="https://github.com/user-attachments/assets/5bacbab7-7510-4436-90d0-b53b088c4a77" />
+
+-> 기본 산점도를 시각화하기 위해 비용을 X축, 수익을 Y축으로 설정. 산점도를 통해 비용이 증가할수록 수익도 선형적으로 증가하는 것을 확인 할 수 있다.
+
+<img width="490" height="489" alt="image" src="https://github.com/user-attachments/assets/2d84393e-f462-4dd9-85a9-3105931a99e1" />
+
+-> 두 변수 간의 선형 관계를 보다 명확히 보기 위한 회귀선 추가.
+
+<img width="584" height="416" alt="image" src="https://github.com/user-attachments/assets/68c1341a-6019-42eb-96f3-c5518179b459" />
+
+-> 마지막으로 마케팅 비용과 관리 비용 칼럼의 요소를 추가하여 버블차트 형태로 시각화함. 마케팅 비용이 클수록 버블의 크기도 크게 표현됨. 관리 비용은
+색상으로 표현했고, 붉은 색상이 적은 비용, 푸른 색상은 많은 비용을 의미한다.
+
+**<10.7 공간 시각화>**
+
+<img width="1715" height="772" alt="image" src="https://github.com/user-attachments/assets/9cf94445-9c9e-4c4f-a3c3-f368fd5858e5" />
+
+-> 가장 기본적인 지도. location 옵션을 활용하여 나타내고자 하는 지역의 위도와 경도를 입력함.
+
+<img width="1451" height="731" alt="image" src="https://github.com/user-attachments/assets/073bc832-b19f-4db7-a4f0-6821c1ad9ceb" />
+
+-> title 옵션으로 지도의 형태를 steamen Toner 로 바꿀 수 있지만, 기술적인 이유로 불가능 했기에 그냥 OpenStreetMap에다가 남산에 원표시와 포인트 그림을 삽입하는 형식으로 진행
+
+<img width="1182" height="613" alt="image" src="https://github.com/user-attachments/assets/f3cf3085-ddf7-486a-b999-8cd3e9c20efd" />
+
+-> 앞에 불러왔던 서울 지역의 스타벅스 위치 데이터를 지도 위에 표현. MarkerCluster()함수를 사용하여 각 구역에 존재하는 스타벅스 지점의 수를 숫자로 표현. 축소시 더 많은 지점들이 뭉쳐 합해짐
+
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
 ~~~
