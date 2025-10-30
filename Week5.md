@@ -118,6 +118,40 @@
 
 -> 앞에 불러왔던 서울 지역의 스타벅스 위치 데이터를 지도 위에 표현. MarkerCluster()함수를 사용하여 각 구역에 존재하는 스타벅스 지점의 수를 숫자로 표현. 축소시 더 많은 지점들이 뭉쳐 합해짐
 
+<img width="1431" height="697" alt="image" src="https://github.com/user-attachments/assets/b908e132-5740-4c36-8607-3ebda2510160" />
+
+스타벅스 지점을 도트맵으로 시각화. 서울 중심부와 강남 지역의 큰 길가. 그리고 여의도에 매장이 집중되어 포진되어 있는것을 확인할 수 있다.
+
+<img width="1351" height="725" alt="image" src="https://github.com/user-attachments/assets/5b92edc2-ab56-43c8-8b00-9d2439365f1c" />
+
+-> 버블맵 시각화. 특정 지점에 지정된 수치의 값을 표현하기 때문에 구 단위로 집계. gu_name 칼럼을 기준으로 위도와 경도의 평균값을 구하여 각 구의 중심 지점을 만듬. 
+이후 스타벅스 지점명을 카운트하여 각 구에 포함되는 매장 수 합계를 구한다.
+
+<img width="1325" height="725" alt="image" src="https://github.com/user-attachments/assets/d41f1366-d254-4f9d-9587-3d36d0e59abc" />
+
+-> 코로플레스맵. 구역에 따라 채도와 명도가 달라지도록 시각화 하는 방법. 각 주의 경계값이 필요한 방식이다. 시각화한 결과는 캘리포니아 지역과 노스캘로라이나 지역의 실업률이 높음을 알 수 있다.
+
+<img width="959" height="480" alt="image" src="https://github.com/user-attachments/assets/1e694230-fdef-4d61-9c13-33d2e0088610" />
+
+-> 커넥션 맵. graph_objects 패키지를 활용하여 테이블 없이 직접 위도와 경도를 입력. 시작점과 도착점의 위도, 경도를 입력하고 반복문으로 입력했던 모든 경로를 시각화하는 방식
+
+
+**<10.8 박스플롯>**
+
+
+<img width="721" height="489" alt="image" src="https://github.com/user-attachments/assets/1f0d4e7c-d014-4be8-a080-be4a44885915" />
+
+-> 가로 세로 기본 박스플롯 시각화. 최솟값 기준을 넘어가는 극단값이 보임. 그리고 중앙값이 다소 낮은 위치에 있는 것으로 보아 데이터 분포가 오른꼬리 분포 형태를 가지고 있을 것으로 판단됨.
+
+
+<img width="721" height="451" alt="image" src="https://github.com/user-attachments/assets/a1d9b0f4-51c9-4bce-9470-d421864267e9" />
+
+-> 스타트업의 수익을 비교하기 위해서 state 변수를 사용하여 3개의 주의 박스플롯을 시각화. 큰 차이는 아니지만 직관적으로 플로리다 수익이 가장 높음을 확인할 수 있음.
+
+<img width="597" height="436" alt="image" src="https://github.com/user-attachments/assets/b84d7ed3-45b6-4497-b59b-c71b69a8c74c" />
+
+-> 기본 옵션에는 없는 평균값과 실제 데이터 포인트들을 적용. 이를 통해 분포를 보다 구체적으로 파악 가능. 플로리다는 평균값과 중앙값 간 차이가 가장 큰 것으로 보아
+정규분포와 차이가 클 것으로 판단된다.
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
 ~~~
