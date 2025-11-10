@@ -86,7 +86,37 @@
 ~~~
 
 
+<img width="328" height="716" alt="image" src="https://github.com/user-attachments/assets/2d75f655-c073-4886-ba31-699921fcbfda" />
+
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요. -->
+
+~~~
+결측값으로는 인식되지 않지만 실젯값이 빈 문자열인 값이 있는지 확인, 없음.
+~~~
+
+<img width="336" height="735" alt="image" src="https://github.com/user-attachments/assets/d8329d61-26cb-49b1-a5f3-bdf66c8f4e18" />
+
+~~~
+dropna() 함수, how 옵션을 활용하여 결측치를 제거한다. 제거한 후의 결과.
+~~~
+
+<img width="304" height="728" alt="image" src="https://github.com/user-attachments/assets/87449756-ad80-43ce-966b-210e71c32fc6" />
+
+~~~
+기본적인 결측값 대치는 fillna() 옵션을 활용할 수 있다. 평균, 중간값, 최빈갑, 최댓값, 최솟값 등의 옵션을 사용하여 대치가 가능하다.
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 11.2. 이상치 처리
 
